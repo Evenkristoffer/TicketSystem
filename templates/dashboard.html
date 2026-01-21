@@ -6,10 +6,45 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <div class="box">
-    <h1>Dashboard</h1>
-    <p>Du er logget inn som <strong>{{ user }}</strong>.</p>
-    <p><a href="{{ url_for('logout') }}">Logg ut</a></p>
+  <div class="box wide">
+    <div class="row between">
+      <h1>Dashboard</h1>
+      <a href="{{ url_for('logout') }}">Logg ut</a>
+    </div>
+    <p>Logget inn som <strong>{{ user }}</strong>.</p>
+
+    {% if message %}
+      <div class="message">{{ message }}</div>
+    {% endif %}
+
+    <div class="panel">
+      <h2>Ny ticket</h2>
+      <form method="post">
+        <label>Tittel</label>
+        <input name="title" required>
+        <label>Beskrivelse</label>
+        <textarea name="description" rows="3" required></textarea>
+        <button type="submit">Lagre</button>
+      </form>
+    </div>
+
+    <div class="panel">
+      <h2>Alle tickets (i minnet)</h2>
+      {% if tickets %}
+        <ul class="ticket-list">
+          {% for t in tickets %}
+            <li>
+              <div><strong>#{{ t.id }}</strong> {{ t.title }}</div>
+              <div class="sub">Status: {{ t.status }} | Eier: {{ t.owner }}</div>
+              <div class="desc">{{ t.description }}</div>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>Ingen tickets enda.</p>
+      {% endif %}
+    </div>
   </div>
 </body>
 </html>
+ 

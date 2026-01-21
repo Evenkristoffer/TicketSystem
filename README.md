@@ -1,7 +1,10 @@
 # Ticketsystem
-
+Add db
+add ticket owner
+add usernames to register 
+yes
 ## Rask setup
-- CMD: `setup.bat` (lag venv, installer) eller `setup.bat -run` for å starte
+- CMD: `./setup.bat` (lag venv, installer) eller `setup.bat -run` for å starte
 
 ## Manuell ekstrem kjedelig og treig kjøring
 1) Lag venv  
