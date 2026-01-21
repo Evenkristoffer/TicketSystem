@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="box">
+    <h1>Dashboard</h1>
+    <p>Du er logget inn som <strong>{{ user }}</strong>.</p>
+    <p><a href="{{ url_for('logout') }}">Logg ut</a></p>
+  </div>
+</body>
+</html>

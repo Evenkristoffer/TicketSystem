@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <title>Logg inn</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="box">
+    <h1>Logg inn</h1>
+    {% if error %}
+      <div class="message">{{ error }}</div>
+    {% endif %}
+    <form method="post">
+      <label>Brukernavn</label>
+      <input name="username" required>
+
+      <label>Passord</label>
+      <input name="password" type="password" required>
+
+      <button type="submit">Logg inn</button>
+    </form>
+  </div>
+</body>
+</html>
