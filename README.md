@@ -6,7 +6,6 @@
 ## Manuell ekstrem kjedelig og treig kjøring
 1) Lag venv  
    `python -m venv venv`  
-   PowerShell: `.\venv\Scripts\Activate.ps1`
 
 2) Installer Flask  
    `pip install -r requirements.txt`
