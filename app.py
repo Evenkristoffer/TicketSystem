@@ -48,7 +48,7 @@ def dashboard():
                     "title": title,
                     "description": description,
                     "status": "apen",
-                    "owner": session["user"],
+                    "eier": session["user"],
                 }
             )
             NEXT_ID += 1

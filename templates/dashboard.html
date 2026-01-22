@@ -35,7 +35,7 @@
           {% for t in tickets %}
             <li>
               <div><strong>#{{ t.id }}</strong> {{ t.title }}</div>
-              <div class="sub">Status: {{ t.status }} | Eier: {{ t.owner }}</div>
+              <div class="sub">Status: {{ t.status }} | Eier: {{ t.eier }}</div>
               <div class="desc">{{ t.description }}</div>
             </li>
           {% endfor %}
@@ -47,4 +47,3 @@
   </div>
 </body>
 </html>
- 
