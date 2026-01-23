@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Dashboard</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
   <div class="box wide">
@@ -11,7 +11,7 @@
       <h1>Dashboard</h1>
       <a href="{{ url_for('logout') }}">Logg ut</a>
     </div>
-    <p>Logget inn som <strong>{{ user }}</strong>.</p>
+    <p>Logget inn som <strong>{{ user }}</strong> ({{ rolle }}).</p>
 
     {% if message %}
       <div class="message">{{ message }}</div>
@@ -44,6 +44,7 @@
         <p>Ingen tickets enda.</p>
       {% endif %}
     </div>
+    <p class="footer">© TechSupport AS — Created in Norway</p>
   </div>
 </body>
 </html>
