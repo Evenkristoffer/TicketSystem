@@ -1,5 +1,5 @@
 """
-Copyright (c) TechSupport AS - Created in Norway
+Copyright (c) TechSupport AS -  No rights deserved.
 """
 
 import os
@@ -185,4 +185,4 @@ def register():
 
 if __name__ == "__main__":
     init_db()
-    app.run(debug=True)
+    app.run(debug=True, port=33096)
